@@ -1,0 +1,17 @@
+@import '../../css/main.css';
+@import '../nav-bar/style.css';
+@import '../project-list-item/style.css';
+
+/* Троеточие после длинного кода проекта буду делать на JS */
+
+.list-item__inner {
+    display: flex;
+    gap: 16px;
+}
+
+.list-item__status {
+    padding: 0px 8px;
+    background-color: var(--border-bronze);
+    color: var(--font-secondary);
+    border-radius: 4px;
+}

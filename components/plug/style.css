@@ -1,0 +1,29 @@
+@import '../../css/main.css';
+@import '../nav-bar/style.css';
+
+.plug {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--border-default-disabled);
+    border-radius: 4px;
+    min-height: 100vh;
+}
+
+.plag__text {
+    margin: 0px;
+}
+
+.plug__btn {
+    background-color: var(--bg-primary-default);
+}
+
+.plug__btn:hover {
+    background-color: var(--bg-primary-hover);
+}
+
+.plug__btn:active {
+    background-color: var(--bg-primary-active);
+}
