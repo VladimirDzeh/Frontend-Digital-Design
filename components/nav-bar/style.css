@@ -20,7 +20,6 @@
     border-radius: 4px;
     background-color: transparent;
     color: var(--font-secondary);
-    cursor: var(--cursor-pointer);
 }
 
 .menu__btn_active {

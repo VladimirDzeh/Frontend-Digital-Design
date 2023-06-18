@@ -1,6 +1,5 @@
 @import '../../css/main.css';
 
-/* Троеточие после длинного кода проекта буду делать на JS */
 
 .list-item {
     display: flex;
@@ -8,6 +7,7 @@
     padding: 0px 16px 8px;
     border-bottom: 1px solid var(--border-active);
     gap: 16px;
+    cursor: pointer;
 }
 
 .list-item__group {
@@ -15,11 +15,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 16px;
+    gap: 4px;
 }
 
 .list-item__title {
-    margin: 0;
+    height: 38px;
+    flex: 1 1 auto;
     font-weight: 400;
     display: -webkit-box;
     overflow: hidden;
@@ -39,16 +40,16 @@
 }
 
 .list-item__code {
-    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .list-item__user-info {
-    margin: 0;
     color: var(--font-disabled);
 }
 
 .list-item__admin-info {
-    margin: 0;
     color: var(--font-disabled);
 }
 
@@ -60,7 +61,6 @@
     background: transparent;
     border: 1px solid var(--border-default-disabled);
     border-radius: 4px;
-    cursor: var(--cursor-pointer);
     display: none;
 }
 
@@ -75,5 +75,5 @@
 }
 
 .list-item:hover .list-item__btn {
-    display: block;
+    display: flex;
 }

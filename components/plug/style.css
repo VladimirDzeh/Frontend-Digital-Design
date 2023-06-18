@@ -12,10 +12,6 @@
     min-height: 100vh;
 }
 
-.plag__text {
-    margin: 0px;
-}
-
 .plug__btn {
     background-color: var(--bg-primary-default);
 }

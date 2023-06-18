@@ -2,7 +2,6 @@
 @import '../nav-bar/style.css';
 @import '../project-list-item/style.css';
 
-/* Троеточие после длинного кода проекта буду делать на JS */
 
 .list-item__inner {
     display: flex;
