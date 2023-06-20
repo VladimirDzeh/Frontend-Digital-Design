@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+import icon from '@/assets/images/user-icon.png';
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>task-list-item</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div class="container">
+export default function createTackListItem() {
+    return `
         <div class="task-item list-item">
             <div class="list-item__group">
                 <div class="list-item__inner">
@@ -20,8 +12,9 @@
                         Velit reiciendis iure quae vero unde ipsa quos nemo, saepe, vitae tempora similique nihil eligendi. Consequatur nisi numquam dicta reprehenderit quos soluta quia totam, deleniti tempora praesentium temporibus ducimus nemo.
                         Rem, autem fugit voluptas quae ea tempore architecto corrupti adipisci qui, rerum aliquam est vel alias voluptatum quaerat eaque nemo, libero magnam! Cumque odit nisi nam assumenda animi alias repudiandae!
                     </h4>
-                    <img class="list-item__icon btn-menu__icon" src="../../images/nav-bar/user-icon.png" width="24"
-                        height="24" alt="user-icon">
+                    <img
+                        class="list-item__icon btn-menu__icon" src=${icon} width="24"height="24" alt="user-icon"
+                    >
                 </div>
                 <div class="list-item__description">
                     <div class="list-item__set">
@@ -34,12 +27,21 @@
                     <p class="list-item__admin-info">Баранов В.В. изменил 1 минуту назад</p>
                 </div>
             </div>
-            <button class="list-item__btn">
-                <img src="../../images/project-list-item/dots.svg" alt="dots">
-            </button>
+            <div class="list-item__wrapper" id="close">
+                <button class="list-item__btn" data-action="toggle">
+                    <svg width="3" height="13">
+                        <use xlink:href="#dots" />
+                    </svg>
+                </button>
+                <ul class="list-item__dropdown-menu dropdown-menu">
+                <li class="dropdown-menu__item">
+                    <a class="dropdown-menu__link" href="#">Редактировать</a>
+                </li>
+                <li class="dropdowm-menu__item">
+                    <a class="dropdown-menu__link dropdown-menu__link_red" href="#">Удалить</a>
+                </li>
+            </ul>
+            </div>
         </div>
-    </div>
-    </div>
-</body>
-
-</html>
+    `;
+}

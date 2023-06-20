@@ -1,0 +1,19 @@
+.plug {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid $border-default-disabled;
+    border-radius: 4px;
+    height: calc(100vh - 262px);
+    &__btn {
+        background-color: $bg-primary-default;
+        &:hover {
+            background-color: $bg-primary-hover;
+        }
+        &:active {
+            background-color: $bg-primary-active;
+        }
+    }
+}
