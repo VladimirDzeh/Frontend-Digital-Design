@@ -4,6 +4,22 @@ body {
     font-weight: 400;
     line-height: 19px;
     font-size: 14px;
-    color: $font-primary-default;
-    background: $bg-secondary;
+    color: $white-color;
+    background: $white-color;
+}
+
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    .container {
+        width: 1024px;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+    .header {
+        background-color: $bg-blue;
+        margin-bottom: 60px;
+    }
 }

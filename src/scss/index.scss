@@ -2,9 +2,36 @@
 @import 'reset';
 @import 'vars';
 @import 'global';
-@import '@/components/appMurkup/appMarkup';
-@import '@/components/nav-bar/nav-bar';
-@import '@/components/project-list-item/project-list-item';
-@import '@/components/task-list-item/task-list-item';
-@import '@/components/plug/plug';
-@import 'media';
+
+
+.nav {
+    padding: 20px 0 20px 0;
+    &__list {
+        @extend %flex;
+        justify-content: center;
+        gap: 70px;
+    }
+    &__link {
+        font-size: 20px;
+        color: $white-color;
+        text-transform: uppercase;
+    }
+}
+
+.buttons {
+    @extend %flex;
+    &:not(:last-child) {
+        margin-bottom: 50px;
+    }
+    &__click {
+        @extend %flex;
+        background-color: $bg-btn-project;
+        color: $white-color;
+        padding: 15px;
+        border-radius: 20px;
+        font-size: 15px;
+        &_active {
+            background-color: $bg-btn-task;
+        }
+    }
+}

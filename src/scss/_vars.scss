@@ -1,42 +1,12 @@
-$bg-primary-default: #1F75CB;
-$bg-primary-hover: #1068BF;
-$bg-primary-active: #0B5CAD;
-$bg-primary-disabled: #DCDCDE;
-$bg-secondary: #FFFFFF;
-$bg-secondary-hover: #ECECEF;
-$bg-secondary-active: #DCDCDE;
+$white-color: #ffffff;
+$bg-blue: rgb(83, 83, 223);
+$bg-btn-project: rgb(45, 137, 173);
+$bg-btn-task: rgb(140, 0, 255);
 
-$border-default-disabled: rgba(0, 0, 0, 0.15);
-$border-hover: rgba(18, 19, 22, 0.5);
-$border-active: #1C1C1C;
-$border-error: #EE4222;
-$border-bronze: #9E6955;
 
-$font-primary-default: #1C1C1C;
-$font-secondary: #FFFFFF;
-$font-disabled: #8E8E8E;
-$font-error: #EE4222;
-$font-placeholder: #D9D9D9;
 
-%icon-style {
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-%container {
-    width: 1024px;
-    padding: 0 10px;
-    margin: 0 auto;
-}
-
-%dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    z-index: 6;
-    background-color: $bg-secondary;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    padding: 16px;
+%flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
