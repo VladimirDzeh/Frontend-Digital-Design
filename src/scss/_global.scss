@@ -7,3 +7,7 @@ body {
     color: $font-primary-default;
     background: $bg-secondary;
 }
+
+svg {
+    pointer-events: none;
+}

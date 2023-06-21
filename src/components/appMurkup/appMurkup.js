@@ -4,7 +4,9 @@ import createTackListItem from '@/components/task-list-item/task-list-item';
 import createPlug from '@/components/plug/plug';
 
 
-export default function createMarkup() {
+export default function createMarkup(dataBase) {
+    let { projects, tasks, content } = dataBase;
+
     return `
         <div class="wrapper">
             <header class="header">
@@ -14,9 +16,9 @@ export default function createMarkup() {
             </header>    
             <main class="main">
                 <div class="container">
-                    ${createProjectListItem()}
-                    ${createTackListItem()}
-                    ${createPlug()}
+                    ${createProjectListItem(projects)}
+                    ${createTackListItem(tasks)}
+                    ${createPlug(content)}
                 </div>
             </main>
             <footer class="footer">

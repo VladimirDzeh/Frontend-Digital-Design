@@ -46,6 +46,7 @@
             }
             &__icon {
                 @extend %icon-style;
+                pointer-events: none;
             }
             &:hover {
                 border-color: $bg-secondary;
