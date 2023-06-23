@@ -15,6 +15,9 @@
         font-size: 20px;
         color: $white-color;
         text-transform: uppercase;
+        &:hover {
+            color: $white-grey;
+        }
     }
 }
 

@@ -1,24 +1,36 @@
 import '@/index.html';
 import '@/scss/index.scss';
-import Buttons from '@/js/btnsClass.js';
+import Buttons from '@/js/Buttons';
+import init from "@/js/init";
+import createUrl from '@/js/createUrl';
+import dataBase from '@/js/dataBase';
+import xhrRequest from '@/js/xhr';
+import fetchRequest from '@/js/fetch';
+import axiosRequest from '@/js/axios';
+import makeRequests from '@/js/makeRequests';
 
+localStorage.clear();
 
-const url = 'http://45.12.239.156:8081/api/login';
-const data = {
-    login: "dzekh.v",
-    password: "jc63fk"
-};
-
-fetch(url, {
+fetch(createUrl('login'), {
     method: 'POST',
     headers: {
         "Content-Type": "application/json"
     },
-    body: JSON.stringify(data)
+    body: JSON.stringify(dataBase.accessKeys)
 })
     .then(response => response.json())
     .then(res => localStorage.setItem('token', res.token))
     .catch(res => console.log(res));
 
-new Buttons('#render').render();
+init(
+    Buttons,
+    dataBase,
+    createUrl,
+    xhrRequest,
+    fetchRequest,
+    axiosRequest,
+    makeRequests
+);
+
+
 
